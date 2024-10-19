@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+}
+.summary__label {
+  align-self: center;
+}
+
+@media only screen and (max-width: 921px) {
+  body {
+    padding: 2rem 4rem !important;
+  }
+  .app {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem !important;
+  }
+
+  .movements,
+  .summary {
+    width: 71vw;
+    margin: 0 auto;
+  }
+  .operation {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .movements {
+    overflow-y: scroll;
+    height: 500px;
+  }
+
+  .summary {
+    position: relative;
+    margin-top: 2rem !important;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+  }
+  .btn--sort {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+  }
+  .summary__label {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  .navLogin .logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    order: 0;
+    margin-right: 60% !important;
+    margin-bottom: 3rem;
+  }
+  .navLogin .welcome {
+    order: 1;
+  }
+  .navLogin div {
+    order: 2;
+  }
+  .login__input {
+    width: 100% !important;
+  }
+  .navLogin .welcome {
+    margin-right: 60%;
+    margin-bottom: 3rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navLogin div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .login {
+    margin: 0 auto !important;
+    flex-direction: column;
+    gap: 2rem !important;
+  }
+  .login__btn {
+    background-color: white !important;
+    padding: 0.1px 3rem;
+    border-radius: 7px;
+    margin-left: auto;
+  }
+  .message {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 58%;
+  }
+  .movements__row {
+    position: relative;
+    padding-bottom: 3rem !important;
+  }
+  .movements__date {
+    position: absolute;
+    bottom: 1rem;
+    left: 6rem;
+  }
+  .balance__value {
+    font-size: 3.8rem !important;
+  }
+
+  .summary {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    gap: 0.5rem;
+  }
+
+  .summary div {
+    justify-content: flex-end;
+  }
+  .summary__box--interest {
+    grid-column-start: 2;
+  }
+  .summary__box--in {
+    justify-content: flex-end;
+  }
+
+  .navLogedIn .welcome {
+    order: 2;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+  }
+  .navLogedIn .logo {
+    order: 0;
+    margin-right: 50% !important;
+  }
+  .navLogedIn .logout-btn {
+    order: 1;
+  }
+
+  .form--transfer,
+  .form--close,
+  .form--loan {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(5, auto) !important;
+  }
+  .form--loan {
+    grid-template-rows: repeat(3, auto) !important;
+  }
+
+  .form__input--to,
+  .form__input--user,
+  .form__input--loan-amount {
+    grid-row-start: 1;
+  }
+  .form__label,
+  .form__label--loan {
+    grid-row-start: 2;
+  }
+  .form__input--amount,
+  .form__input--pin {
+    grid-row-start: 3;
+  }
+
+  .form__label:nth-of-type(2) {
+    grid-row-start: 4;
+  }
+  .form__btn--transfer,
+  .form__btn--close {
+    grid-row-start: 5;
+    justify-self: end;
+  }
+  .form__btn--loan {
+    grid-row-start: 3;
+    justify-self: end;
+  }
+  .message {
+    grid-row-start: 6;
+  }
+  .operation {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  html {
+    font-size: 50% !important;
+  }
+  .balance {
+    display: block !important;
+  }
+  .balance__value {
+    direction: rtl;
+  }
+  .form__btn--transfer,
+  .form__btn--close,
+  .form__btn--loan {
+    justify-self: start;
+    width: 100% !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  .logout-timer {
+    font-size: 1.4rem !important;
+  }
+  .summary {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 4rem);
+  }
+  .summary div {
+    justify-content: flex-end;
+    width: 100% !important;
+  }
+  .summary__box--interest {
+    grid-row-start: 3 !important;
+    grid-column-start: auto;
+  }
+  .summary__box--out {
+    grid-row-start: 2 !important;
+  }
+  .summary__box--in {
+    grid-row-start: 1 !important;
+  }
+  .summary div {
+    justify-content: space-evenly;
+  }
+
+  .operation {
+    width: 80%;
+  }
+  .navLogedIn .logo {
+    margin-right: 13% !important;
+  }
+  .movements {
+    height: 450px;
+  }
+}
