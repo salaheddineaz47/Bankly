@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Timer({ onTimeOut }) {
-  const [time, setTime] = useState(600 * 5);
+  const [time, setTime] = useState(60 * 5);
 
   useEffect(() => {
     const tick = () => {

@@ -39,7 +39,7 @@ export default function Login({ onLogin, isLogedIn, onLogout }) {
             />
             <Input
               // onRef={inputLoginPin}
-              type="number"
+              type="password"
               classTitle="pin"
               use="login"
               pHolder="PIN"
