@@ -133,6 +133,25 @@ export default function App() {
         isLogedIn={isLogedIn}
         onLogout={handleLogout}
       />
+      {!isLogedIn && (
+        <>
+          <div className="flex items-end flex-col text-2xl mt-16">
+            <h2>
+              <strong>👤 Test it out!</strong>
+            </h2>
+            <br />
+            <b>User 1:</b>
+            {/* <br /> */}
+            Username: se
+            <br />
+            Password: 1111 <br />
+            <br />
+            <b> User 2:</b>
+            Username: me <br />
+            Password: 2222 <br />
+          </div>
+        </>
+      )}
       {isLogedIn && (
         <Main>
           <Balance
